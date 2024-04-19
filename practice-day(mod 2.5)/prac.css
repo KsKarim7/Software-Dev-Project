@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.banner-container{
+    background-image: url("./img/background.jpg"),linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4));
+    background-blend-mode: overlay;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.title{
+
+}
+
+@media only screen and (max-width: 480px){
+    .title{
+        color:green;
+    }
+};
+
+@media only screen and (min-width: 481px) and (max-width:768px){
+    .title{
+        color: goldenrod;
+        font-size: 123px;
+        display: none;
+    }
+}
