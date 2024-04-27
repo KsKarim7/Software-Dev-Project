@@ -1,0 +1,24 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.banner{
+    /* background: linear-gradient(90deg in oklab, #040641, #3F0753); */
+    background: linear-gradient(to right, #040641 0%,#120645 25%,#20074A 50%,#31074F 75%, #3F0753 100%);
+    height: 100vh;
+}
+.nav{
+    height: 20%;
+    display: flex;
+    /* justify-content: space-around; */
+    padding: 0% 20% ;
+}
+li{
+    list-style: none;
+    
+}
+.nav-btn{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: flex-end;
+}
