@@ -8,17 +8,51 @@
     height: 100vh;
 }
 .nav{
-    height: 20%;
+    /* height: 20%; */
     display: flex;
-    /* justify-content: space-around; */
-    padding: 0% 20% ;
+    align-items: center;
+    justify-content: space-around;
 }
 li{
     list-style: none;
+    color: white;
     
+}
+a{
+    color: white;
+    text-decoration: none;
 }
 .nav-btn{
     display: flex;
+    gap: 40px;
+    text-decoration: none ;
+
     /* flex-direction: row; */
-    align-items: flex-end;
+    /* align-items: flex-end; */
+}
+.contact-btn {
+    /* margin: 5px; */
+    /* color: white; */
+    border: none;
+    border-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: currentColor; /* Sets the background color to match the text color */
+}
+.abt-btn{
+    background-color:orange;
+    padding:10px 20px;
+    font-size:20px;
+    font-weight: bold;
+    color: white;
+}
+.contact-btn{
+    background-color: white;
+    padding:10px 20px;
+    font-size:20px;
+    font-weight: bold;
+}
+.pretty-lady{
+    width: 400px; /* Set the width of the image */
+    height: auto;
 }
