@@ -26,9 +26,6 @@ a{
     display: flex;
     gap: 40px;
     text-decoration: none ;
-
-    /* flex-direction: row; */
-    /* align-items: flex-end; */
 }
 .contact-btn {
     /* margin: 5px; */
@@ -55,4 +52,19 @@ a{
 .pretty-lady{
     width: 400px; /* Set the width of the image */
     height: auto;
+}
+#text{
+    color: white;
+}
+.banner-container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 80vh;
+    align-items: center;
+}
+.title{
+    color: orange;
+    font-size: 70px;
+    
 }
