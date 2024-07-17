@@ -1,0 +1,11 @@
+.cls{
+    color: aqua;
+}
+.menus-container >li{
+    margin-right: auto;
+    text-decoration: none !important;
+}
+.nav{
+    background-color: rgb(16, 16, 129);
+    color: white;
+}
