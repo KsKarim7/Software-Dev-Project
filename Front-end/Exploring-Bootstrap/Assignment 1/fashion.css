@@ -9,3 +9,23 @@
     background-color: rgb(16, 16, 129);
     color: white;
 }
+.pro-be{
+    color: rgb(158, 82, 158);
+}
+.btn-nav{
+    background-color:  rgb(16, 16, 129);
+    color: white;
+    cursor:alias;
+    font-weight: bold;
+}
+.title{
+    font-size: 100px;
+    font-weight:400;
+
+}
+.carou{
+    background: linear-gradient(to bottom right, #d2a3d2, #5e045e);
+}
+.pro{
+    font-weight: bold;
+}
