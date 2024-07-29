@@ -29,3 +29,14 @@
 .pro{
     font-weight: bold;
 }
+.prod-banner{
+    font-size: 30px;
+    gap: 35px;
+    color: black;
+}
+/* .img-card{
+    width: ;
+} */
+.card-sec{
+    margin: 0px 120px ;
+}
