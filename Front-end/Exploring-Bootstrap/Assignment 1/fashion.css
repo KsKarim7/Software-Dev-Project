@@ -40,3 +40,16 @@
 .card-sec{
     margin: 0px 120px ;
 }
+.sale-banner{
+    background-color: #9a77d4;
+    color: white;
+}
+.sale-banner-img {
+    padding: 3% 0px;
+    width: 50vw; 
+    height: 50vh;
+    overflow: hidden; 
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
