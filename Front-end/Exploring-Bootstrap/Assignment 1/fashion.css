@@ -6,6 +6,10 @@
     background-color: rgb(16, 16, 129);
     color: white;
 }
+.nav-items>p>a{
+    color: rgb(254, 254, 254);
+    text-decoration: none;
+}
 .pro-be{
     color: rgb(158, 82, 158);
 }
@@ -56,4 +60,11 @@
 }
 .category-icon > i{
     font-size: 45px;
+}
+.foot>li>a{
+    text-decoration: none;
+    color: rgb(200, 198, 248) ;
+}
+.footer-icons > i{
+    font-size: 25px;
 }
