@@ -1,10 +1,7 @@
 .cls{
     color: aqua;
 }
-.menus-container >li{
-    margin-right: auto;
-    text-decoration: none !important;
-}
+
 .nav{
     background-color: rgb(16, 16, 129);
     color: white;
@@ -26,11 +23,14 @@
 .carou{
     background: linear-gradient(to bottom right, #d2a3d2, #5e045e);
 }
+.carouu{
+    background: linear-gradient(to bottom right, #ba80db, #460346);
+}
 .pro{
     font-weight: bold;
 }
 .prod-banner{
-    font-size: 30px;
+    font-size: 25px;
     gap: 35px;
     color: black;
 }
@@ -39,6 +39,7 @@
 } */
 .card-sec{
     margin: 0px 120px ;
+    gap: 20px;
 }
 .sale-banner{
     background-color: #9a77d4;
@@ -52,4 +53,7 @@
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
+}
+.category-icon > i{
+    font-size: 45px;
 }
