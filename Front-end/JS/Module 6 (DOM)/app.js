@@ -28,9 +28,11 @@ function createEl() {
 
 createEl();
 
-document.getElementById("submit-btn").addEventListener("click", function (e) {
+document.getElementById("submit-btn").addEventListener("click", inputChange)
+
+function inputChange(e) {
     // console.log("funk your browser");
     // createEl();
     var inputValue = document.getElementById("input").value;
     console.log(inputValue);
-})
+}
