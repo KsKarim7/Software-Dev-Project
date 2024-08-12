@@ -1,6 +1,6 @@
 const loadData = (global) => {
     const searchText = document.getElementById("search-field").value;
-    console.log(searchText)
+    // console.log(searchText)
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${searchText ? searchText : global}`)
         .then((res) => res.json())
         .then((data) => displayData(data.meals));
