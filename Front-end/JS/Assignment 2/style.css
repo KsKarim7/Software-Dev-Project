@@ -22,17 +22,22 @@
     .nav-bar>img{
         width: 50%;
         display: flex;
+        margin-bottom: 10px;
+
         /* margin: auto; */
     }
     .nav-bar>button{
         width: 50%;
     }
+    #blog{
+        margin-top: 3px;
+    }
+    span{
+        display: block;
+    }
 }
 
-.sub-nav>button{
-    margin:auto 5px;
-    
-}
+
 
 
 

@@ -1,19 +1,22 @@
-const displayData = (data) => {
-    document.getElementById("total-meals").innerText = data.length;
+const loadData = () => {
+    fetch("https://openapi.programming-hero.com/api/videos/categories")
+        .then(res => res.json())
+        .then(data => displayData(data.data));
+}
 
-    const mealsContainer = document.getElementById("items-container");
-    data.forEach((meal) => {
-        const card = document.createElement("div");
-        card.classList.add("box");
-        card.innerHTML = `
-        <img class="box-img" src="${meal.strMealThumb}" alt="">
-        <h2>${meal?.strMeal}</h2>
-        <p>${meal.strInstructions.slice(0, 100)}</p>
-        <button 
-        onclick="displayModal('${meal.idMeal}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Details
-        </button>
-        `;
-        mealsContainer.appendChild(card);
+loadData();
+
+
+const displayData = (data) => {
+    // console.log(data);
+
+    const dynamicNav = document.getElementById("dynamic-nav");
+    data.forEach((option) => {
+        const btn = document.createElement("span");
+
+        btn.innerHTML = `<button type="button" class="btn me-2 mb-1" style="background-color: rgb(206, 205, 205); color: rgb(103, 103, 103);"><span class="fw-semibold">${option.category}</span></button>`
+
+
+        dynamicNav.appendChild(btn);
     });
 };
