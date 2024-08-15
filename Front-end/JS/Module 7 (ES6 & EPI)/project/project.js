@@ -25,6 +25,7 @@ const displayData = (data) => {
         `;
         mealsContainer.appendChild(card);
     });
+
 };
 
 
