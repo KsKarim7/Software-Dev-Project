@@ -9,5 +9,24 @@
         <h1>THis is our home.</h1>
         <h1>Me myself: {{author}}</h1>
         <h2>My age: {{age}}</h2>
+
+        {% comment %} Conditional statement {% endcomment %} {% if age >= 20 %}
+        <h4>You application is approved for driving license</h4>
+        {% elif age >= 10 and age <= 19%}
+        <h4>You are not eligible for driving license</h4>
+        {% else %}
+        <h4>You are a child</h4>
+
+        {% endif %} {{lst}}
+
+        <h1>{{ lst | join:" - " }}</h1>
+        <h1>{{ birthday | date:"D d M Y" }}</h1>
+        <h1>{{ lst | length }}</h1>
+        <h1>{{'Happy coding. Python is fun.' | truncatewords:2}}</h1>
+        <h1>{{"Python Is Fun" | cut:" "}}</h1>
+
+        {% for i in courses %}
+        <h3>{{i.id}}) {{i.name}} {{i.fee}}</h3>
+        {% endfor %}
     </body>
 </html>
