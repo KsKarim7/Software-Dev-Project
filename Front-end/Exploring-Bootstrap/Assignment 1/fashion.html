@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="fashion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="nav">
+        <nav class="row container m-auto d-flex justify-content-around align-items-center p-4 ">
+            <div class="logo-container col-md-4">
+                <img class="w-50" src="/resources/Group 2.png" alt="logo">
+            </div>
+            <div class="col-md-4">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+            <div class="col-md-4 d-flex justify-content-evenly nav-items align-items-center" >
+                <!-- <li class="list-group-item">Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <i  class="fa fa-shopping-cart" style="font-size: 25px;" ></i>
+                <i class="fa fa-user-circle" style="font-size: 25px;"></i> -->
+                <p><a class="" href="#">Home</a></p>
+                <p><a class=" text-white-50" href="#">About</a></p>
+                <p><a class=" text-white-50" href="#">Contact Us</a></p>
+                <p><a class="" href="#"><i  class="fa fa-shopping-cart " style="font-size: 25px;" ></i></a></p>
+                
+                <p><a class="" href="#"><i class="fa fa-user-circle" style="font-size: 25px;"></i></a></p>
+                
+              
+                
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade ">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active d-flex align-items-center justify-content-center carou">
+          <div>
+            <p class="fs-2">Pro.Beyond</p>
+            <h1 class="title">IPHONE <span class="pro">14 Pro</span></h1>
+            <p>Created to change everything for the better. For everyone</p>
+            <button type="button" class="btn btn-nav py-2 px-5 fs-4">Shop Now</button>
+          </div>
+          <img src="/resources/Iphone Image.png" class="d-block w-25" alt="...">
+        </div>
+
+  
+        <div class="carousel-item d-flex align-items-center justify-content-center carouu">
+          <div>
+            <p class="fs-2">Pro.Beyond</p>
+            <h1 class="title">SAMSUNG <span class="pro">S23 Ultra</span></h1>
+            <p>Created to change everything for the better. For everyone</p>
+            <button type="button" class="btn btn-nav py-2 px-5 fs-4">Shop Now</button>
+          </div>
+          <img src="/resources/galaxy_s23_ultra-preview.png" class="d-block w-50 " alt="...">
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+    <!-- Banner -->
+ 
+    <div class="row   ">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center py-4">
+          <img src="/resources/ipad.png"  class="w-50"  alt="">
+          <div class="mx-2 ">
+            <h1>iPad 9</h1>
+            <p>The iPad 9 offers a budget-friendly tablet experience with a classic design, powerful A13 Bionic chip, and a versatile 10.2-inch display.It's perfect for everyday tasks, media consumption, and casual gaming.</p>
+          </div>
+        </div>
+        <div class="bg-primary-subtle d-flex align-items-center py-4">
+          <img src="/resources/hero__gnfk5g59t0qe_xlarge_2x 1.png"  class="w-50" alt="">
+          <div class="mx-5"> 
+            <h1>Apple AirPods Max</h1>
+            <p>Apple AirPods Max are premium over-ear headphones with exceptional sound quality, active noise cancellation, and comfortable design.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 bg-secondary-subtle d-flex align-items-center">\
+        <div class="d-flex mx-3">
+          <div>
+            <h1>MacBook Air</h1>
+            <p>The MacBook Air is a sleek and lightweight laptop known for its powerful performance, stunning Retina display, and long battery life. It's perfect for students, professionals, and anyone seeking a portable yet capable device.</p>
+            <button type="button" class="btn btn-nav py-2 px-5 fs-4">Shop Now</button>
+          </div>
+          <img src="/resources/Group 6.png" class="w-50"  alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Banner -->
+     <div class="container my-5" >
+
+       <div class="d-flex justify-content-between my-3">
+        <h2>Browse By Category</h2>
+        <div class="fs-1 d-flex gap-4 ">
+          <i class="fa fa-angle-left"></i>
+          <i class="fa fa-angle-right"></i>
+        </div>
+       </div>
+
+       <div>
+        <div class="row text-center">
+          <div class="col-md-2 ">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body category-icon">
+                <i class="fa fa-mobile-phone"></i>
+                <p class="card-title fw-bolder">Phones</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body category-icon">
+                <i class="fa fa-clock-o"></i>
+                <p class="card-title fw-bolder">Smart Watches</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body category-icon">
+                <i class="fa fa-camera-retro"></i>
+                <p class="card-title fw-bolder">Cameras</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body category-icon">
+                <i class="fa fa-headphones"></i>
+                <p class="card-title fw-bolder">Headphones</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body category-icon">
+                <i class="fa fa-desktop"></i>
+                <p class="card-title fw-bolder">Computers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ">
+            <div class="card bg-secondary-subtle">
+              <div class="card-body category-icon">
+                <i class="fa fa-gamepad"></i>
+                <p class="card-title fw-bolder">Gaming</p>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+
+
+    <!-- Selling products banner -->
+    
+    <nav class="my-5 card-sec" style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+      <ol class="breadcrumb prod-banner">
+        <li class="breadcrumb-item "><a class="text-dark" href="#">New Arrival</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Bestseller</li>
+        <li class="breadcrumb-item active" aria-current="page">Featured Products</li>
+      </ol>
+    </nav>
+
+    <div class="d-flex card-sec">
+      <div class="card text-center bg-secondary-subtle">
+        <div class="">
+          <i class="fa fa-heart fa-lg" style="color: #b3b7be;"></i>
+        </div>
+        <div class=" ">
+          <img class="w-50 my-3" src="/resources/Iphone 14 pro 1-2.png" alt="">
+          <p class="card-text fw-semibold fs-4 my-2">Apple iPhone 14 Pro Max 128GB Deep Purple</p>
+          <h5 class="card-title fs-2 fw-bold fst-italic py-3">$900</h5>
+          <a href="#" class="btn btn-dark fs-5 px-5 rounded-3 py-2">Buy Now</a>
+        </div>
+  
+      </div>
+      <div class="card text-center bg-secondary-subtle">
+        <div class="">
+          <i class="fa fa-heart fa-lg" style="color: #b3b7be;"></i>
+        </div>
+        <div class="">
+          <img class="w-50 my-3" src="/resources/Iphone 14 pro 1-3.png" alt="">
+          <p class="card-text  fs-4 fw-semibold my-2">Blackmagic Pocket Cinema Camera 6k</p>
+          <h5 class="card-title fs-2 fw-bold fst-italic py-3">$2535</h5>
+          <a href="#" class="btn btn-dark fs-5 px-5 rounded-3 py-2">Buy Now</a>
+        </div>
+
+      </div>
+      <div class="card text-center bg-secondary-subtle">
+        <div class="">
+          <i class="fa fa-heart fa-lg " style="color: #e61919;"></i>
+        </div>
+        <div class="">
+          <img class="w-50 my-3" src="/resources/Iphone 14 pro 1-1.png" alt="">
+          <p class="card-text fs-4 fw-semibold my-2">Apple watch Series 9 GPS 41mm Starlight Aluminium Case</p>
+          <h5 class="card-title fs-2 fw-bold fst-italic py-3">$399</h5>
+          <a href="#" class="btn btn-dark fs-5 px-5 rounded-3 py-2">Buy Now</a>
+        </div>
+      </div>
+      <div class="card text-center bg-secondary-subtle">
+        <div class="">
+          <i class="fa fa-heart fa-lg" style="color: #b3b7be;"></i>
+        </div>
+        <div class=" ">
+          <img class="w-50 my-3" src="/resources/hero__gnfk5g59t0qe_xlarge_2x 1.png" alt="">
+          <p class="card-text fs-4 fw-semibold my-2">AirPods Max Silver</p>
+          <h5 class="card-title fs-2 fw-bold fst-italic py-3">$546</h5>
+          <a href="#" class="btn btn-dark fs-5 px-5 rounded-3 py-2">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <!-- Sale Banner -->
+    <div class="m-auto d-flex align-items-center sale-banner">
+      <div></div>
+      <img class="sale-banner-img" src="/resources/image 19.png" alt="">
+      <div class="text-center container">
+        <h1 class="fw-bold" style="font-size: 70px;"><span style="color: #39058c;"> 11.11 </span>Sale</h1>
+        <p>Massive post-Thanksgiving sales event with deep discounts on various products.Black Friday is the day after Thanksgiving in the US, marking the start of the holiday shopping season.</p>
+      </div>
+      <img class="sale-banner-img" src="/resources/ipda_sale.jpg" alt="">
+    </div>
+
+
+    <!-- Footer -->
+     <footer class=" text-white py-5" style="background-color:rgb(14, 12, 63) ;">
+      <div class="row container m-auto">
+        <div class="col-md-4 d-flex gap-5 ">
+          <img class="" style="height: 40px;" src="/resources/Group 2.png" alt="">
+          <div class="d-flex gap-5 footer-icons">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-facebook-f" style="color: #f6f5f4;"></i>
+            <i class="fa fa-pinterest-p "></i>
+            <i class="fa fa-instagram" style="color: #ffffff;"></i>
+          </div>
+        </div>
+        <div class="col-md-8 d-flex justify-content-around" >
+          <div class="foot text-white-50">
+            <h4>Services</h4>
+            <li><a href="">Bonus program</a></li>
+            <li><a href="">Gift cards</a></li>
+            <li><a href="">Credit and payment</a></li>
+            <li><a href="">Service Contracts</a></li>
+            <li><a href="">Non-cash account</a></li>
+            <li><a href="">Payment</a></li>
+          </div>
+          <div class="foot text-white-50">
+            <h4>Assistance to the buyer</h4>
+            <li><a href="">Find and order</a></li>
+            <li><a href="">Terms of delivery</a></li>
+            <li><a href="">Exchange and return of goods</a></li>
+            <li><a href="">Guarantee</a></li>
+            <li><a href="">Frequently asked questions</a></li>
+            <li><a href="">Terms of use of the site</a></li>
+          </div>
+
+        </div>
+      </div>
+     </footer>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

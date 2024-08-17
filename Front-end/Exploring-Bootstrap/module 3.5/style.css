@@ -1,0 +1,20 @@
+.navb{
+    background-color: #ACECE8 !important;
+}
+
+.buton{
+    background-color:#092D43 ;
+    color: white;
+    border-radius: 13%;
+    padding:1% ;
+    font-weight:500;
+    font-size: 12px;
+}
+.banner-container{
+    background-color: #18736D;
+    color: #FFFFFF;
+    height: 100vh;
+}
+.image{
+    width: 90%;
+}

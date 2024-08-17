@@ -1,0 +1,70 @@
+.cls{
+    color: aqua;
+}
+
+.nav{
+    background-color: rgb(16, 16, 129);
+    color: white;
+}
+.nav-items>p>a{
+    color: rgb(254, 254, 254);
+    text-decoration: none;
+}
+.pro-be{
+    color: rgb(158, 82, 158);
+}
+.btn-nav{
+    background-color:  rgb(16, 16, 129);
+    color: white;
+    cursor:alias;
+    font-weight: bold;
+}
+.title{
+    font-size: 100px;
+    font-weight:400;
+
+}
+.carou{
+    background: linear-gradient(to bottom right, #d2a3d2, #5e045e);
+}
+.carouu{
+    background: linear-gradient(to bottom right, #ba80db, #460346);
+}
+.pro{
+    font-weight: bold;
+}
+.prod-banner{
+    font-size: 25px;
+    gap: 35px;
+    color: black;
+}
+/* .img-card{
+    width: ;
+} */
+.card-sec{
+    margin: 0px 120px ;
+    gap: 20px;
+}
+.sale-banner{
+    background-color: #9a77d4;
+    color: white;
+}
+.sale-banner-img {
+    padding: 3% 0px;
+    width: 50vw; 
+    height: 50vh;
+    overflow: hidden; 
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.category-icon > i{
+    font-size: 45px;
+}
+.foot>li>a{
+    text-decoration: none;
+    color: rgb(200, 198, 248) ;
+}
+.footer-icons > i{
+    font-size: 25px;
+}
