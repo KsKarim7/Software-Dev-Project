@@ -21,5 +21,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('appstore/',include('appstore.urls')),
-    path('',views.home),
+    path('',views.base),
 ]
