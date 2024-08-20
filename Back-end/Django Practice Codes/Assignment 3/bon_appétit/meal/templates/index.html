@@ -3,7 +3,18 @@
 {% block content %}
 {{block.super}}
 
-<h1>Index.html</h1>
+<div class="row container mx-auto ">
+    {% for i in menu %}
+
+    <div class="card col-2 m-2" style="width: 18rem;">
+        <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{i.strCategory}}</h5>
+            <p class="card-text">{{i.strCategoryDescription}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 
 
 {% endblock %}

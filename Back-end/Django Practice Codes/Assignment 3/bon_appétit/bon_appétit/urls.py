@@ -23,4 +23,5 @@ urlpatterns = [
     path('meal/',include('meal.urls')),
     path('',views.home,name='home'),
     path('about/',views.about,name = 'about'),
+    path('meal/',views.meal,name = 'meal')
 ]

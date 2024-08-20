@@ -5,3 +5,7 @@ def home(req):
 
 def about(req):
     return render(req,'index.html');
+
+def meal(req):
+    return render(req,'index.html');
+
