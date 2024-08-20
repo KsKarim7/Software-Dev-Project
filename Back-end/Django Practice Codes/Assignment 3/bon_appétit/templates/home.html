@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %} {{block.super}}
+<div class="text-center">
+    <img src="{% static 'logo.jpg' %}" class="w-25" alt="Bon Appétit Logo" />
+    <h1>We invite you to join us!</h1>
+</div>
+{% endblock %}
