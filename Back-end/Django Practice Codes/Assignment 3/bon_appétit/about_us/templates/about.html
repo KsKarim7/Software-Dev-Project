@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{{block.super}}
+
+<div class="text-center d-flex justify-content-center align-items-center">
+    <img class='w-25' src="{% static 'food.jpg' %}" alt="food">
+    <div class='px-4'>
+        <h4>About Us - Bon Appétit</h4>
+        <h2 class="fs-bold">We Provide Good Quality Food to your Family!</h2>
+        <p class='my-4'>Welcome to Bon Appétit, where culinary artistry meets unforgettable dining experiences. Nestled in the heart of [City Name], Bon Appétit has been delighting food enthusiasts since [Year Founded]. Our restaurant is more than just a place to eat; it’s a celebration of flavors, traditions, and the joy of sharing meals with loved ones.At Bon Appétit, we believe that great food starts with the finest ingredients. That’s why we source the freshest, locally-sourced produce, sustainably caught seafood, and premium cuts of meat. Our menu, curated by our visionary chefs, is a harmonious blend of classic recipes and innovative creations that cater to a variety of palates.</p>
+        <button type="button" class="btn btn-danger">Learn more</button>
+    </div>
+    <img class='w-25' src="{% static 'kitchen.jpg' %}" alt="kitchen">
+</div>
+
+
+{% endblock %}
