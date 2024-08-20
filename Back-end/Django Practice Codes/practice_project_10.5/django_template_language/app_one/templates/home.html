@@ -6,6 +6,39 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>Home Sweet Home</h1>
+        
+        <h1>{{ lst | join:" - " }}</h1>
+        <h1>{{ birthday | date:"D d M Y" }}</h1>
+        <h1>{{ lst | length }}</h1>
+        <h1>{{ numLst | linenumbers }}</h1>
+        <h1>{{'Happy coding. Python is fun.' | truncatewords:2}}</h1>
+        <h1>{{"Python Is Fun" | cut:" "}}</h1>
+        
+        {% for i in courses %}
+        <h3>{{i.id}}) {{i.name}} {{i.fee}}</h3>
+        {% endfor %}
+        
+        <h1>{{'king King' | capfirst}}</h1>
+        <p>{{numLst | add:"[44, 55, 66]"}}</p>
+        <h2>{{"My Name Is Khan" | cut:" "}}</h2>
+        {% comment %} <p>{{['Apple', 'Mango', 'Orange'] | first}}</p>
+        <p>{{['Apple', 'Mango', 'Orange'] | last}}</p> {% endcomment %}
+        <h4>
+            {{ dictLst | dictsort:"name" }}
+        </h4>
+        <h1>THis is our home.</h1>
+        <h1>Me myself: {{author}}</h1>
+        <h2>Institute: {{institute}}</h2>
+        <h2>My age: {{age}}</h2>
+    
+        {% comment %} Conditional statement {% endcomment %} {% if age >= 20 %}
+        <h4>You application is approved for driving license</h4>
+        {% elif age >= 10 and age <= 19%}
+        <h4>You are not eligible for driving license</h4>
+        {% else %}
+        <h4>You are a child</h4>
+    
+        {% endif %} {{lst}}
     </body>
-</html>
+    </html>
+    
