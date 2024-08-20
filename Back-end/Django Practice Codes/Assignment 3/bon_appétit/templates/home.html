@@ -3,8 +3,17 @@
 
 
 {% block content %} {{block.super}}
-<div class="text-center">
-    <img src="{% static 'logo.jpg' %}" class=" logo" alt="Bon Appétit Logo" />
-    <h1>We invite you to join us!</h1>
+<div class="text-center d-flex container align-items-center mt-5">
+    <div>
+        <h1>We invite you to join us!</h1>
+        <h5 class='px-5'>
+            Bon Appétit is not just a restaurant; it's a community hub where food brings people together. We invite you to join us and experience the passion, creativity, and dedication that make Bon Appétit a beloved dining destination. Come savor the difference at Bon Appétit, where every meal is a masterpiece.
+            <br>
+            <br>
+            Our commitment to excellence extends beyond the kitchen. The warm and inviting ambiance at Bon Appétit is designed to make every visit memorable, whether you’re here for a romantic dinner, a family gathering, or a special celebration. Our attentive staff ensures that each guest feels welcomed and well taken care of, offering personalized service that enhances your dining experience.
+        </h5>
+
+    </div>
+    <img src="{% static 'logo.jpg' %}" class="w-100 logo" alt="Bon Appétit Logo" />
 </div>
 {% endblock %}

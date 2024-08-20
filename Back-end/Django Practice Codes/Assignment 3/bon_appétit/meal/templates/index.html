@@ -3,14 +3,15 @@
 {% block content %}
 {{block.super}}
 
+<h1 class='my-5 text-center'>Our Delicious Menu</h1>
 <div class="row container mx-auto ">
     {% for i in menu %}
 
     <div class="card col-2 m-2" style="width: 18rem;">
         <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title">{{i.strCategory}}</h5>
-            <p class="card-text">{{i.strCategoryDescription}}</p>
+            <h5 class="card-title">{{i.idCategory}}. {{i.strCategory}}</h5>
+            <p class="card-text">{{i.strCategoryDescription|truncatewords:10}}</p>
         </div>
     </div>
     {% endfor %}
