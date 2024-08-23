@@ -7,7 +7,8 @@ def home(req):
     if(req.method == 'POST'):
         form = StudentForm(req.POST)
         if(form.is_valid()):
-            form.save(commit = False)
+            form.save()
+            print(form.cleaned_data)
 
     else:
         form = StudentForm()
