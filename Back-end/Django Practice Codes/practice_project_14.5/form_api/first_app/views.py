@@ -16,3 +16,7 @@ def DjangoForm(req):
         print(form.cleaned_data)
         # return render(req,'django_form.html',{'form':form})
     return render(req,'django_form.html',{'form':form})
+
+
+def DjangoModel(req):
+    return render(req,'django_model.html')
