@@ -8,18 +8,24 @@
         <div class="col-sm-4">
             <div class="card">
                 <h4>{{task.id}}. {{task.title}}</h4>
-                <p class=>Task Assigned Date: {{task.due_date}}</p>
+                <p class="text-end"> {{task.due_date}}</p>
                 <p>{{task.task_description}}</p>
                 <p class="fw-bold">Category:
                     {% for cat in task.category.all %}
                     <button class="btn btn-sm m-1 text-light" disables style="background-color: #6f42c1;" >  {{cat.name}}</button>
                     {% endfor %}
                 </p>
-                <div class="d-flex justify-content-end">
-                    <a href="{% url 'edit_task' task.id %}" class="btn btn-warning">Edit</a>
-                    <a href="{% url 'delete_task' task.id %}" class="btn ms-3 btn-danger">Delete</a>
+                
+                {% if task.is_completed%}
+                    <button class="btn btn-success" disables>Completed ✅</button>
+                {% else %}
+                    <div class="d-flex justify-content-end">
+                        <a href="{% url 'edit_task' task.id %}" class="btn btn-warning">Edit</a>
+                        <a href="{% url 'delete_task' task.id %}" class="btn ms-3 btn-danger">Delete</a>
 
-                </div>
+                    </div>
+                {% endif %}
+
             </div>
 
         </div>
