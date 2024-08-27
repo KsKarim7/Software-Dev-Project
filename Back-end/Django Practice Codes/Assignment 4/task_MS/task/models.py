@@ -1,4 +1,5 @@
 from django.db import models
+# from category.models import Category
 
 
 # Create your models here.
@@ -8,7 +9,7 @@ class Task(models.Model):
     task_description = models.TextField(max_length=500)
     is_completed = models.BooleanField(default=False)
     due_date = models.DateField()
-
+    # category = models.ForeignKey('category.Category', on_delete=models.CASCADE, related_name='tasks')
 
     def __str__(self):
         return f"{'✅' if self.is_completed else ''}{self.title}!"
