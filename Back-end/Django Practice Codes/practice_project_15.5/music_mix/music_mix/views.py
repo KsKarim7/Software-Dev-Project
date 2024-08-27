@@ -4,10 +4,8 @@ from musician.models import Musician
 
 # Create your views here.
 def home(req):
-    album = Album.objects.all()
-    # album = Album.objects.filter(musician=req.)
-    musician = Musician.objects.filter(album= album[4])
-    print(musician)
+    data = Album.objects.all()
+    # print(musician)
     # print(album,musician)
     # return render(req,'home.html',{'album':album},{'musician':musician})
-    return render(req,'home.html',{'data':musician})
+    return render(req,'home.html',{'data':data})

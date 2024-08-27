@@ -16,7 +16,7 @@
         <th scope="col">Actions</th>
       </tr>
     </thead>
-    <tbody>
+    {% comment %} <tbody>
         {% for post in data %}
         <tr>
             <th scope="row">1</th>
@@ -29,6 +29,30 @@
             <td>@mdo</td>
         </tr>
         {% endfor %}
+    </tbody> {% endcomment %}
+
+    <tbody>
+      {% for album in data %}
+      <tr>
+        <th scope="col">{{album.id}}</th>
+        <th scope="col">
+          <a class="btn" href="{% url "edit_musician" album.musician.id %}">
+            {{album.musician.first_name}} {{album.musician.last_name}}
+          </a>
+
+        </th>
+        <th scope="col">{{album.musician.email}}</th>
+        <th scope="col">{{album.rating}}</th>
+        <th scope="col">{{album.musician.instrument_type}}</th>
+        <th scope="col">{{album.album_name}}</th>
+        <th scope="col">{{album.release_date}}</th>
+        <th scope="col">
+          <a href="{% url "edit_album" album.id %}" class="text-white btn btn-warning btn-sm">Edit</a>
+
+          <a href="{% url "delete_album" album.id %}" class="text-white btn btn-danger btn-sm">Delete</a>
+        </th>
+      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
