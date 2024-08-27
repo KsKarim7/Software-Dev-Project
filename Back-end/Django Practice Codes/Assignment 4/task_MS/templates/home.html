@@ -2,6 +2,27 @@
 
 {% block content %}
 
-<h1>I am home</h1>
+<div class="d-flex flex-wrap  container mt-5">
+
+    {% for task in data %}
+        <div class="col-sm-4">
+            <div class="card">
+                <h4>{{task.id}}. {{task.title}}</h4>
+                <p class=>Task Assigned Date: {{task.due_date}}</p >
+                <p>{{task.task_description}}</p>
+                <p class="fw-bold">Category:
+                    {% for cat in task.category.all %}
+                    <button class="btn btn-sm m-1 text-light" disables style="background-color: #6f42c1;" >  {{cat.name}}</button>
+                    {% endfor %}
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn  btn-warning">Edit</button>
+                    <button type="button" class="btn ms-1 btn-danger">Delete</button>
+
+                </div>
+            </div>
+
+        </div>
+    {% endfor %}
+</div>
 
 {% endblock %}
