@@ -58,6 +58,19 @@ def profile(req):
     data = Post.objects.filter(author = req.user)
     return render(req, 'profile.html', {'data' : data})
 
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        profile_form = forms.ChangeUserForm(request.POST, instance = request.user)
+        if profile_form.is_valid():
+            profile_form.save()
+            messages.success(request, 'Profile Updated Successfully')
+            return redirect('profile')
+    
+    else:
+        profile_form = forms.ChangeUserForm(instance = request.user)
+    return render(request, 'update_profile.html', {'form' : profile_form})
+
 
 def pass_change(req):
     if req.method == 'POST':
@@ -71,3 +84,7 @@ def pass_change(req):
     else:
         form = PasswordChangeForm(user=req.user)
     return render(req, 'pass_change.html', {'form' : form})
+
+def user_logout(request):
+    logout(request)
+    return redirect('user_login')
