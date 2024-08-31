@@ -5,9 +5,11 @@
 
 <form style="width:50% ; margin : auto" method="post">
     <h1 class="text-center my-4" >User Form </h1>
+    <small class="fw-bold">Want to change your password? Click here  </small><a href="{% url 'pass_change' %}" class="btn btn-danger btn-sm" >Change Password</a>
     {% csrf_token %}
-{{form | crispy}}
-
+    {{form | crispy}}
+    
+    
 <button class="btn btn-outline-primary my-4">Confirm</button>
 </form>
 

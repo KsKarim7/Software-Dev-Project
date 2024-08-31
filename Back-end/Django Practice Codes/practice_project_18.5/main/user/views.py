@@ -22,8 +22,6 @@ def register(req):
         register_form = forms.RegistrationForm()
     return render(req, 'register.html', {'form' : register_form, 'type' : 'Register'})
 
-    return render(req, 'register.html')
-
 def user_login(req):
     if req.method == 'POST':
         form = AuthenticationForm(req, req.POST)
@@ -60,3 +58,16 @@ def profile(req):
     else:
         profile_form = forms.ChangeUserCredential(instance = req.user)
     return render(req, 'profile.html', {'form' : profile_form})
+
+def pass_change(req):
+    if req.method == 'POST':
+        form = PasswordChangeForm(req.user,data = req.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(req, 'Password has been changed')
+            update_session_auth_hash(req, form.user)
+            return redirect('profile')
+    
+    else:
+        form = PasswordChangeForm(user=req.user)
+    return render(req, 'pass_change.html', {'form' : form})
