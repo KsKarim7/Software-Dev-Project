@@ -71,3 +71,8 @@ class DeletePostView(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('profile')
     pk_url_kwarg = 'id'
+
+
+class DetailPostView(DetailView):
+    model = models.Post
+    template_name = 'post_details.html'
