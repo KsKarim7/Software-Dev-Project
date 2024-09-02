@@ -34,23 +34,39 @@ def register(req):
     return render(req, 'register.html', {'form' : register_form, 'type' : 'Register'})
 
 
-def user_login(req):
-    if req.method == 'POST':
-        form = AuthenticationForm(req, req.POST)
-        if form.is_valid():
-            user_name = form.cleaned_data['username']
-            user_pass = form.cleaned_data['password']
-            user = authenticate(username=user_name, password=user_pass)
-            if user is not None:
-                messages.success(req, 'Logged in Successfully')
-                login(req, user)
-                return redirect('profile')
-            else:
-                messages.warning(req, 'Incorrect login credentials')
-                return redirect('register')
-    else:
-        form = AuthenticationForm()
-        return render(req, 'register.html', {'form' : form, 'type' : 'Login'})
+# def user_login(req):
+#     if req.method == 'POST':
+#         form = AuthenticationForm(req, req.POST)
+#         if form.is_valid():
+#             user_name = form.cleaned_data['username']
+#             user_pass = form.cleaned_data['password']
+#             user = authenticate(username=user_name, password=user_pass)
+#             if user is not None:
+#                 messages.success(req, 'Logged in Successfully')
+#                 login(req, user)
+#                 return redirect('profile')
+#             else:
+#                 messages.warning(req, 'Incorrect login credentials')
+#                 return redirect('register')
+#     else:
+#         form = AuthenticationForm()
+#         return render(req, 'register.html', {'form' : form, 'type' : 'Login'})
+
+class UserLoginView(LoginView):
+    template_name = 'register.html'
+    # success_url = reverse_lazy('profile')
+    def get_success_url(self):
+        return reverse_lazy('profile')
+    def form_valid(self, form):
+        messages.success(self.request, 'Logged in Successfully')
+        return super().form_valid(form)
+    def form_invalid(self, form):
+        messages.danger(self.request, 'Invalid login credentials')
+        return super().form_invalid(form)
+    def get_context_data(self, **kwargs): 
+        context = super().get_context_data(**kwargs)
+        context['type'] = 'Login'
+        return context
     
 
 @login_required
@@ -88,3 +104,5 @@ def pass_change(req):
 def user_logout(request):
     logout(request)
     return redirect('user_login')
+
+
