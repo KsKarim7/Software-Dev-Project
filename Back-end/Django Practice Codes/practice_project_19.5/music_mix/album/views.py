@@ -1,34 +1,38 @@
 from django.shortcuts import render,redirect
+from django.urls import reverse_lazy
 from . import forms
 from . import models
 from album.forms import AlbumForm
 from album.models import Album
+from django.views.generic import CreateView,UpdateView,DeleteView
 
 
 # Create your views here.
+class AddAlbumView(CreateView):
+  model = models.Album
+  form_class = forms.AlbumForm
+  template_name = 'add_album.html'
+  success_url = reverse_lazy('add_album') 
+  def form_valid(self, form):
+    form.instance.Musician = self.request.user
+    return super().form_valid(form)
 
-def add_album(req):
-    if(req.method == 'POST'):
-        album_form = forms.AlbumForm(req.POST)
-        if(album_form.is_valid()):
-            album_form.save()
-            return redirect('home')
-    
-    else:
-        album_form = forms.AlbumForm()
+class EditAlbumView(UpdateView):
+  model = models.Album
+  form_class = forms.AlbumForm
+  template_name = 'add_album.html'
+  pk_url_kwarg = 'id'
+  success_url = reverse_lazy('home') 
 
-    return render(req, 'add_album.html',{'form':album_form})
+class DeleteAlbumView(DeleteView):
+  model = models.Album
+  template_name = 'delete.html'
+  success_url = reverse_lazy('home') 
+  pk_url_kwarg = 'id'
+  
 
-def edit_album(request, id):
-  album = Album.objects.filter(id=id).first()
-  form = AlbumForm(instance=album)
-  if request.method == "POST":
-    form = AlbumForm(request.POST, instance=album)
-    
-    if form.is_valid():
-      form.save()
-    return redirect('home')
-  return render(request, './album/add_album.html', {"form": form})
+
+
  
 
 def delete_album(req,id):
