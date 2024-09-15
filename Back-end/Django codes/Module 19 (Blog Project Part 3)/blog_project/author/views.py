@@ -61,7 +61,7 @@ class UserLoginView(LoginView):
         messages.success(self.request, 'Logged in Successfully')
         return super().form_valid(form)
     def form_invalid(self, form):
-        messages.danger(self.request, 'Invalid login credentials')
+        messages.warning(self.request, 'Invalid login credentials')
         return super().form_invalid(form)
     def get_context_data(self, **kwargs): 
         context = super().get_context_data(**kwargs)
